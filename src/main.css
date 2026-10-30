@@ -8,8 +8,58 @@
 	--color-brand-200: #ff5f00;
 	--color-brand-300: #ff3d00;
 
+	--color-primary-100: #078691;
+
 	--color-grey-100: #f4f4f4;
 	--color-grey-200: #b4b4b4;
 	--color-grey-300: #7e7e7e;
 	--color-grey-400: #474747;
+	--color-grey-500: #31393c;
+
+	--shadow-100: 0 2px 12px 0 rgb(0 0 0 / 0.14);
+
+	--text-headline-1: 48px;
+	--text-headline-1--font-weight: 400;
+	--text-headline-2: 40px;
+	--text-headline-2--line-height: 1;
+	--text-headline-2--font-weight: 500;
+	--text-headline-3: 36px;
+	--text-headline-3--font-weight: 500;
+	--text-headline-4: 32px;
+	--text-headline-4--font-weight: 500;
+	--text-headline-5: 24px;
+	--text-headline-5--font-weight: 500;
+
+	--text-body-1: 24px;
+	--text-body-1--font-weight: 400;
+	--text-body-2: 20px;
+	--text-body-2--font-weight: 600;
+	--text-body-3: 20px;
+	--text-body-3--font-weight: 500;
+	--text-body-4: 20px;
+	--text-body-4--font-weight: 400;
+	--text-body-5: 16px;
+	--text-body-5--font-weight: 500;
+	--text-body-6: 16px;
+	--text-body-6--font-weight: 400;
+	--text-body-7: 14px;
+	--text-body-7--font-weight: 400;
+	--text-body-8: 12px;
+	--text-body-8--font-weight: 400;
+	--text-body-9: 10px;
+	--text-body-9--font-weight: 400;
+
+	--text-button-xl: 36px;
+	--text-button-xl--font-weight: 600;
+	--text-button-lg: 24px;
+	--text-button-lg--font-weight: 600;
+	--text-button: 16px;
+	--text-button--font-weight: 600;
+
+	--text-link-lg: 20px;
+	--text-link-lg--font-weight: 500;
+	--text-link: 16px;
+	--text-link--font-weight: 500;
+	--text-link-sm: 14px;
+	--text-link-sm--font-weight: 500;
 }

@@ -9,7 +9,7 @@ type ButtonProps = ComponentProps<'button'> & {
 }
 
 const BASE_CLASSES =
-	'inline-flex cursor-pointer items-center justify-center gap-2 rounded-2xl text-base font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-200 disabled:cursor-not-allowed'
+	'inline-flex cursor-pointer items-center justify-center gap-2 rounded-2xl text-button transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-200 disabled:cursor-not-allowed'
 
 const VARIANT_CLASSES: Record<ButtonVariant, string> = {
 	primary:
