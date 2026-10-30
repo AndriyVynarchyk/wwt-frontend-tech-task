@@ -1,10 +1,26 @@
+import { useTranslation } from 'react-i18next'
+
+import { Button } from '@/shared/ui/Button'
+
+import homeHero from '../assets/home-hero.webp'
+
 export const App = () => {
+	const { t } = useTranslation('filter')
+
 	return (
-		<section className="w-full h-dvh flex items-center justify-center">
-			{/* eslint-disable-next-line i18next/no-literal-string */}
-			<h1 className="text-6xl text-gray-600 mb-12">
-				WinWinTravel frontend test task
-			</h1>
-		</section>
+		<main>
+			<section className="relative isolate flex min-h-80 flex-col items-center justify-center gap-8 px-4 py-12 md:min-h-[500px]">
+				<img
+					src={homeHero}
+					alt=""
+					className="absolute inset-0 -z-10 size-full object-cover"
+				/>
+				{/* eslint-disable-next-line i18next/no-literal-string */}
+				<h1 className="text-center text-4xl font-semibold text-balance text-white drop-shadow-md md:text-6xl">
+					WinWinTravel frontend test task
+				</h1>
+				<Button size="lg">{t('openButton')}</Button>
+			</section>
+		</main>
 	)
 }
