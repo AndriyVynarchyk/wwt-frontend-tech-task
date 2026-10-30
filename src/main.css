@@ -63,3 +63,9 @@
 	--text-link-sm: 14px;
 	--text-link-sm--font-weight: 500;
 }
+
+@layer base {
+	body:has(dialog[open]) {
+		overflow: hidden;
+	}
+}
