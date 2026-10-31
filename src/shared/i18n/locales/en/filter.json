@@ -1,3 +1,8 @@
 {
-	"openButton": "Open filters"
+	"title": "Filter",
+	"openButton": "Open filters",
+	"applyButton": "Apply",
+	"clearAllButton": "Clear all parameters",
+	"loading": "Loading filters…",
+	"loadError": "Could not load filters"
 }
