@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { FilterModal } from '@/features/filter'
+import { AppliedFilter, FilterModal } from '@/features/filter'
 import { Button } from '@/shared/ui/Button'
 
 import homeHero from '../assets/home-hero.webp'
@@ -12,7 +12,7 @@ export const App = () => {
 
 	return (
 		<main>
-			<section className="relative isolate flex min-h-80 flex-col items-center justify-center gap-8 px-4 py-12 md:min-h-[500px]">
+			<section className="relative isolate flex min-h-80 flex-col items-center justify-center gap-8 px-4 pt-12 pb-24 md:min-h-[500px] md:pb-32">
 				<img
 					src={homeHero}
 					alt=""
@@ -28,6 +28,10 @@ export const App = () => {
 				>
 					{t('openButton')}
 				</Button>
+			</section>
+
+			<section className="relative mx-auto -mt-12 w-full max-w-3xl px-4 pb-8 md:-mt-20 md:pb-12">
+				<AppliedFilter />
 			</section>
 
 			<FilterModal

@@ -7,5 +7,6 @@
 	"loadError": "Could not load filters",
 	"confirmTitle": "Do you want to apply new filter",
 	"confirmCancelButton": "Use old filter",
-	"confirmApplyButton": "Apply new filter"
+	"confirmApplyButton": "Apply new filter",
+	"selectedTitle": "Selected filters"
 }
