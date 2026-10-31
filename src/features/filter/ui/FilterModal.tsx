@@ -47,16 +47,16 @@ export const FilterModal = ({ open, onClose }: FilterModalProps) => {
 				onClose={onClose}
 				title={t('title')}
 				footer={
-					<div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4">
+					<div className="flex flex-col-reverse items-center gap-4 md:grid md:grid-cols-[1fr_auto_1fr]">
 						<Button
 							size="lg"
-							className="col-start-2 md:w-46"
+							className="w-full md:col-start-2 md:w-46"
 							onClick={() => setIsConfirmOpen(true)}
 						>
 							{t('applyButton')}
 						</Button>
 						<LinkButton
-							className="col-start-3 justify-self-end"
+							className="md:col-start-3 md:justify-self-end"
 							onClick={() => resetDraft()}
 						>
 							{t('clearAllButton')}

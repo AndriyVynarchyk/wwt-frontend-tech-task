@@ -24,7 +24,7 @@ export const FilterApplyConfirm = ({
 			onClose={onClose}
 			title={t('confirmTitle')}
 			footer={
-				<div className="flex flex-col-reverse justify-center gap-4 pt-8 sm:flex-row sm:gap-8 md:pt-20">
+				<div className="flex flex-col justify-center gap-4 sm:flex-row sm:gap-8 md:pt-22">
 					<Button
 						variant="outline-grey"
 						size="lg"

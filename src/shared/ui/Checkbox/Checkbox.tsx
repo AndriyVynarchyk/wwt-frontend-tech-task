@@ -16,7 +16,7 @@ export const Checkbox = ({
 	...props
 }: CheckboxProps) => (
 	<label
-		className={`group relative flex cursor-pointer items-center gap-2 text-body-4 text-grey-500 has-disabled:cursor-not-allowed ${className}`}
+		className={`group relative flex cursor-pointer items-center gap-2 text-body-6 text-grey-500 md:text-body-4 has-disabled:cursor-not-allowed ${className}`}
 	>
 		<input
 			type="checkbox"
