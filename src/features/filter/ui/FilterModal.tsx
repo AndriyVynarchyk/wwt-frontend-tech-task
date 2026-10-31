@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { Button } from '@/shared/ui/Button'
@@ -7,6 +7,7 @@ import { LinkButton } from '@/shared/ui/LinkButton'
 import { Modal } from '@/shared/ui/Modal'
 
 import { useFilterItems } from '../api/useFilterItems'
+import { useFilterDraft } from '../model/useFilterDraft'
 
 type FilterModalProps = {
 	open: boolean
@@ -16,6 +17,13 @@ type FilterModalProps = {
 export const FilterModal = ({ open, onClose }: FilterModalProps) => {
 	const { t } = useTranslation('filter')
 	const { data: filterItems, isPending, isError } = useFilterItems()
+	const { isSelected, toggleOption, resetDraft } = useFilterDraft()
+
+	useEffect(() => {
+		if (open) {
+			resetDraft()
+		}
+	}, [open])
 
 	return (
 		<Modal
@@ -31,7 +39,10 @@ export const FilterModal = ({ open, onClose }: FilterModalProps) => {
 					>
 						{t('applyButton')}
 					</Button>
-					<LinkButton className="col-start-3 justify-self-end">
+					<LinkButton
+						className="col-start-3 justify-self-end"
+						onClick={() => resetDraft()}
+					>
 						{t('clearAllButton')}
 					</LinkButton>
 				</div>
@@ -54,6 +65,8 @@ export const FilterModal = ({ open, onClose }: FilterModalProps) => {
 									<Checkbox
 										key={option.id}
 										label={option.name}
+										checked={isSelected(filterItem.id, option.id)}
+										onChange={() => toggleOption(filterItem.id, option.id)}
 									/>
 								))}
 							</div>
