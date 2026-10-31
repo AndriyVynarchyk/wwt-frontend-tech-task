@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export type FilterDraft = Record<string, string[]>
+import type { FilterDraft } from './types'
 
 export const useFilterDraft = () => {
 	const [draft, setDraft] = useState<FilterDraft>({})

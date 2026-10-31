@@ -7,6 +7,8 @@ import { LinkButton } from '@/shared/ui/LinkButton'
 import { Modal } from '@/shared/ui/Modal'
 
 import { useFilterItems } from '../api/useFilterItems'
+import { draftToFilter, filterToDraft } from '../model/filterMappers'
+import { useFilterStore } from '../model/filterStore'
 import { useFilterDraft } from '../model/useFilterDraft'
 
 type FilterModalProps = {
@@ -17,13 +19,19 @@ type FilterModalProps = {
 export const FilterModal = ({ open, onClose }: FilterModalProps) => {
 	const { t } = useTranslation('filter')
 	const { data: filterItems, isPending, isError } = useFilterItems()
-	const { isSelected, toggleOption, resetDraft } = useFilterDraft()
+	const { draft, isSelected, toggleOption, resetDraft } = useFilterDraft()
+	const setFilter = useFilterStore(state => state.setFilter)
 
 	useEffect(() => {
 		if (open) {
-			resetDraft()
+			resetDraft(filterToDraft(useFilterStore.getState().filter))
 		}
 	}, [open])
+
+	const handleApply = () => {
+		setFilter(draftToFilter(draft))
+		onClose()
+	}
 
 	return (
 		<Modal
@@ -35,7 +43,7 @@ export const FilterModal = ({ open, onClose }: FilterModalProps) => {
 					<Button
 						size="lg"
 						className="col-start-2 md:w-46"
-						onClick={onClose}
+						onClick={handleApply}
 					>
 						{t('applyButton')}
 					</Button>
