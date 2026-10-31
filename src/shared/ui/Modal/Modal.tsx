@@ -70,7 +70,7 @@ export const Modal = ({
 						type="button"
 						aria-label={t('close')}
 						onClick={onClose}
-						className="col-start-3 -m-2 cursor-pointer justify-self-end rounded-sm p-2 text-grey-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-200"
+						className="col-start-3 -m-2 cursor-pointer justify-self-end rounded-sm p-2 text-grey-500 focus-ring"
 					>
 						<CloseIcon
 							aria-hidden="true"

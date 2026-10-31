@@ -47,7 +47,7 @@ export const Tooltip = ({ label, content, children }: TooltipProps) => {
 				ref={refs.setReference}
 				type="button"
 				aria-label={label}
-				className="-m-2 inline-flex shrink-0 cursor-pointer rounded-full p-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-200"
+				className="-m-2 inline-flex shrink-0 cursor-pointer rounded-full p-2 focus-ring"
 				{...getReferenceProps()}
 			>
 				{children}

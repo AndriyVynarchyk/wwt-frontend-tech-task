@@ -65,6 +65,10 @@
 	--text-link-sm--font-weight: 500;
 }
 
+@utility focus-ring {
+	@apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-200;
+}
+
 @layer base {
 	body:has(dialog[open]) {
 		overflow: hidden;
