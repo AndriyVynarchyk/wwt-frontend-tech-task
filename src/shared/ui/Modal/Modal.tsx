@@ -15,7 +15,6 @@ type ModalProps = {
 	title: string
 	children?: ReactNode
 	footer?: ReactNode
-	className?: string
 }
 
 export const Modal = ({
@@ -23,8 +22,7 @@ export const Modal = ({
 	onClose,
 	title,
 	children,
-	footer,
-	className = ''
+	footer
 }: ModalProps) => {
 	const { t } = useTranslation()
 	const dialogRef = useRef<HTMLDialogElement>(null)
@@ -56,7 +54,7 @@ export const Modal = ({
 			aria-labelledby={titleId}
 			onClose={onClose}
 			onClick={handleBackdropClick}
-			className={`mx-auto mt-auto mb-0 h-[calc(100dvh-2rem)] max-h-none w-full max-w-none flex-col rounded-t-2xl md:m-auto md:h-fit md:max-h-[calc(100dvh-2rem)] md:w-[calc(100%-2rem)] md:max-w-7xl md:rounded-2xl bg-white shadow-100 backdrop:bg-black/40 backdrop:backdrop-blur-sm open:flex ${className}`}
+			className="mx-auto mt-auto mb-0 h-[calc(100dvh-2rem)] max-h-none w-full max-w-none flex-col rounded-t-2xl md:m-auto md:h-fit md:max-h-[calc(100dvh-2rem)] md:w-[calc(100%-2rem)] md:max-w-7xl md:rounded-2xl bg-white shadow-100 backdrop:bg-black/40 backdrop:backdrop-blur-sm open:flex"
 		>
 			<div className="flex min-h-0 grow flex-col gap-5 p-5 pb-20 md:gap-8 md:p-8">
 				<header className="grid min-h-12 grid-cols-[1fr_auto_1fr] items-center gap-4">
